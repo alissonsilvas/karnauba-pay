@@ -11,7 +11,13 @@ return function (App $app): void {
         ServerRequestInterface $request,
         ResponseInterface $response
     ): ResponseInterface {
-        $response->getBody()->write('Successfully receiving requests!');
-        return $response->withStatus(200);
+        $response->getBody()->write(json_encode([
+            'status' => 'ok',
+            'message' => 'Successfully receiving requests!'
+        ]));
+
+        return $response
+            ->withHeader('Content-Type', 'application/json')
+            ->withStatus(200);
     });
 };
