@@ -1,12 +1,14 @@
 {
-    "name": "karbaubapay/asyncslim",
+    "name": "karnauba-pay/async-slim",
     "type": "project",
-    "description": "Slim is a PHP micro framework that helps you quickly write simple yet powerful web applications and APIs",
+    "description": "Async banking API built with Slim 4 and Swoole",
     "keywords": [
-        "framework",
-        "micro",
+        "slim",
+        "async",
+        "swoole",
+        "banking",
         "api",
-        "router"
+        "php"
     ],
     "license": "MIT",
     "authors": [
@@ -16,7 +18,27 @@
         }
     ],
     "require": {
+        "php": "^8.4",
         "slim/slim": "^4.15",
-        "slim/psr7": "^1.8"
-    }
+        "slim/psr7": "^1.8",
+        "psr/http-message": "^2.0",
+        "psr/http-server-handler": "^1.0",
+        "psr/http-server-middleware": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "start": "php -S localhost:8080 -t public",
+        "test": "phpunit"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
 }
