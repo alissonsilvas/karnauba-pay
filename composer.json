@@ -1,0 +1,22 @@
+{
+    "name": "karbaubapay/asyncslim",
+    "type": "project",
+    "description": "Slim is a PHP micro framework that helps you quickly write simple yet powerful web applications and APIs",
+    "keywords": [
+        "framework",
+        "micro",
+        "api",
+        "router"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alisson Silva",
+            "email": "alisson.sousa12@gmail.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "^4.15",
+        "slim/psr7": "^1.8"
+    }
+}
