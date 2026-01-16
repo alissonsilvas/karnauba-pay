@@ -4,10 +4,8 @@ declare(strict_types=1);
 
 require __DIR__ . '/../vendor/autoload.php';
 
-use Slim\Factory\AppFactory;
+$app = (require __DIR__ . '/../src/Bootstrap/app.php')();
 
-$app = AppFactory::create();
-
-(require __DIR__ . '/../src/routes.php')($app);
+(require __DIR__ . '/../src/Http/routes.php')($app);
 
 $app->run();
